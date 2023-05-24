@@ -1,0 +1,131 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'bookman old style';
+}
+.container {
+	width: 90%;
+	margin: auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: start;
+	justify-content: space-around;
+}
+.calculator {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.calci-box {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	width: 90%;
+}
+
+#box {
+	width: 100%;
+	color: whitesmoke;
+	height: 80px;
+	font-size: 2.4rem;
+	text-align: end;
+	outline: none;
+	border: none;
+	overflow: hidden;
+	background-color: #585853;
+}
+.calci-box div {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: 0.06rem;
+}
+button {
+	background-color: var(--i);
+	color: whitesmoke;
+	border: none;
+	outline: none;
+	height: 70px;
+	font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-weight: normal;
+}
+button:hover {
+	filter: brightness(1.2);
+}
+.calci-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+}
+.calci-form div {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+}
+input[type='text'] {
+	height: 35px;
+	border: 2px solid silver;
+	border-radius: 3px;
+	padding: 10px;
+	outline: none;
+	width: 100%;
+}
+input::placeholder {
+	color: black;
+}
+.save {
+	cursor: pointer;
+	background-color: #3e4bb9;
+	color: whitesmoke;
+	border-radius: 3px;
+	height: 35px;
+	font-size: 1rem;
+	width: 100%;
+	padding: 10px;
+}
+
+.calculations {
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	flex-direction: column;
+	gap: 20px;
+}
+table {
+	width: 100%;
+	height: auto;
+	border-collapse: collapse;
+	text-transform: capitalize;
+}
+table thead tr {
+	font-weight: bold;
+}
+table tbody tr:nth-child(2n-1) {
+	background-color: silver;
+}
+td {
+	padding: 10px 20px;
+}
+i.delete {
+	cursor: pointer;
+}
+
+@media only screen and (min-width: 940px) {
+	.container {
+		flex-direction: row;
+	}
+}
+.error {
+	color: red;
+	font-weight: 800;
+	display: none;
+}
